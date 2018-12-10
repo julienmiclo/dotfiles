@@ -1,1 +1,3 @@
 *.swp
+wallpapers/.wallpapers/*
+!wallpapers/.wallpapers/.gitkeep
