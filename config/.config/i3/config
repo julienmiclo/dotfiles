@@ -4,8 +4,8 @@
 set $mod Mod4
 set $term urxvt
 set $shell /usr/bin/zsh
-set $desktop_wall ~/.wallpaper/010.png
-set $login_wall ~/.wallpaper/010.png
+set $desktop_wall ~/.wallpapers/wallhaven-576124.png
+set $login_wall ~/.wallpapers/mercenary-kings-keyart.jpg
 set $lock_wall $login_wall
 
 
