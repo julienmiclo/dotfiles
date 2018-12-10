@@ -37,6 +37,7 @@ unrar
 unzip
 vim
 wget
+xorg-xrdb
 xorg-xdpyinfo
 xorg-xrandr
 zsh
