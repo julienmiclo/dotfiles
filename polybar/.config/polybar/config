@@ -1,0 +1,22 @@
+
+include-file = ~/.config/polybar/global.conf
+
+include-file = ~/.config/polybar/bars/top.conf
+#include-file = ~/.config/polybar/bars/bottom.conf
+
+include-file = ~/.config/polybar/modules/i3.conf
+include-file = ~/.config/polybar/modules/backlight.conf
+include-file = ~/.config/polybar/modules/battery.conf
+include-file = ~/.config/polybar/modules/date.conf
+#include-file = ~/.config/polybar/modules/powermenu.conf
+include-file = ~/.config/polybar/modules/network.conf
+#include-file = ~/.config/polybar/modules/mpd.conf
+#include-file = ~/.config/polybar/modules/mopidy.conf
+include-file = ~/.config/polybar/modules/temperature.conf
+include-file = ~/.config/polybar/modules/volume.conf
+include-file = ~/.config/polybar/modules/weather.conf
+#include-file = ~/.config/polybar/modules/wlan.conf
+#include-file = ~/.config/polybar/modules/xwindow.conf
+
+
+; vim:ft=dosini

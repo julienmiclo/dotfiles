@@ -1,0 +1,108 @@
+# Alt key
+set $mod Mod4
+
+set $term urxvt
+set $shell /usr/bin/zsh
+set $wall ~/.wallpaper/010.png
+
+########## i3-gaps integration ##########
+
+for_window [class="^.*"] border pixel 2
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="(?i)pavucontrol"] floating enable
+for_window [class="(?i)gucharmap"] floating enable
+for_window [class="(?i)dde-file-manager"] floating enable
+for_window [class="(?i)gitk"] floating enable
+
+gaps inner 15
+gaps outer 5
+smart_borders on
+new_window none
+
+client.focused #fff #fff #fff #fff
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec --no-startup-id $term -e $shell
+
+# kill focused window
+bindsym $mod+q kill
+
+bindsym $mod+F12 exec --no-startup-id xbacklight -inc 20
+bindsym $mod+F11 exec --no-startup-id xbacklight -dec 20
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+Shift+space floating toggle
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+Tab workspace back_and_forth
+
+workspace_auto_back_and_forth yes
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Shift+p exec poweroff
+bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/scripts/lock.sh
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Start-up programs
+exec_always --no-startup-id ~/.config/i3/startup/compton.sh
+exec_always --no-startup-id ~/.config/i3/startup/mopidy.sh
+exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id ~/.config/i3/startup/polybar.sh
+exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
+
+# Rofi
+bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
+
+#Wallpaper
+exec --no-startup-id betterlockscreen -u $wall -w
+exec_always --no-startup-id feh --bg-fill $wall 
