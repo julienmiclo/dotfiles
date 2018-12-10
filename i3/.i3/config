@@ -1,11 +1,15 @@
-# Alt key
-set $mod Mod4
 
+###---Basic configuration---###
+
+set $mod Mod4
 set $term urxvt
 set $shell /usr/bin/zsh
-set $wall ~/.wallpaper/010.png
+set $desktop_wall ~/.wallpaper/010.png
+set $login_wall ~/.wallpaper/010.png
+set $lock_wall $login_wall
 
-########## i3-gaps integration ##########
+
+##--Just i3-gaps related--##
 
 for_window [class="^.*"] border pixel 2
 for_window [window_role="pop-up"] floating enable
@@ -21,6 +25,9 @@ smart_borders on
 new_window none
 
 client.focused #fff #fff #fff #fff
+
+
+##--Basic i3 bindings--##
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -67,7 +74,6 @@ bindsym $mod+Tab workspace back_and_forth
 
 workspace_auto_back_and_forth yes
 
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -81,28 +87,32 @@ bindsym $mod+Shift+9 move container to workspace 9
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+p exec poweroff
-bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/scripts/lock.sh
+
+###---Applications bindings---###
 
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-# Start-up programs
-exec_always --no-startup-id ~/.config/i3/startup/compton.sh
-exec_always --no-startup-id ~/.config/i3/startup/mopidy.sh
-exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id ~/.config/i3/startup/polybar.sh
-exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
-
-# Rofi
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
 
-#Wallpaper
-exec --no-startup-id betterlockscreen -u $wall -w
-exec_always --no-startup-id feh --bg-fill $wall 
+bindsym $mod+Shift+l exec --no-startup-id ~/.scripts/lock.sh
+bindsym $mod+Shift+p exec poweroff
+
+###---Execute external applications---###
+
+exec_always --no-startup-id xrdb ~/.Xresources
+
+exec_always --no-startup-id ~/.scripts/compton.sh
+exec_always --no-startup-id ~/.scripts/mopidy.sh
+exec_always --no-startup-id ~/.scripts/polybar.sh
+
+exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
+
+exec --no-startup-id betterlockscreen -u $lock_wall -w
+exec_always --no-startup-id feh --bg-fill $desktop_wall
