@@ -20,7 +20,6 @@ imagemagick
 jq
 linux-firmware
 mesa
-networkmanager
 ntfs-3g
 numlockx
 openssh
@@ -37,6 +36,8 @@ unrar
 unzip
 vim
 wget
+wpa_actiond
+xorg-xbacklight
 xorg-xrdb
 xorg-xdpyinfo
 xorg-xrandr
