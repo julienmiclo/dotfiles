@@ -6,7 +6,7 @@ set $term urxvt
 set $shell /usr/bin/zsh
 set $desktop_wall ~/.wallpapers/wallhaven-576124.png
 set $login_wall ~/.wallpapers/mercenary-kings-keyart.jpg
-set $lock_wall $login_wall
+set $lock_wall ~/.wallpapers/mercenary-kings-keyart.jpg
 
 
 ##--Just i3-gaps related--##
@@ -19,8 +19,8 @@ for_window [class="(?i)gucharmap"] floating enable
 for_window [class="(?i)dde-file-manager"] floating enable
 for_window [class="(?i)gitk"] floating enable
 
-gaps inner 15
-gaps outer 5
+gaps inner 10
+gaps outer 0
 smart_borders on
 new_window none
 
@@ -37,9 +37,6 @@ bindsym $mod+Return exec --no-startup-id $term -e $shell
 
 # kill focused window
 bindsym $mod+q kill
-
-bindsym $mod+F12 exec --no-startup-id xbacklight -inc 20
-bindsym $mod+F11 exec --no-startup-id xbacklight -dec 20
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
