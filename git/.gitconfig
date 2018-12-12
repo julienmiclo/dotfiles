@@ -1,13 +1,3 @@
 [user]
-	name = Julien Miclo
 	email = julienmiclo@gmail.com
-
-[github]
-	user = julienmiclo
-
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
-
-[color]
-	ui = auto
+	name = julienmiclo
