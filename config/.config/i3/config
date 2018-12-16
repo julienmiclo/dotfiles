@@ -1,13 +1,16 @@
+# i3config
+# ========
 
-###---Basic configuration---###
+# >> init
 
-set $mod Mod4
-set $term urxvt
-set $shell /usr/bin/zsh
-set $desktop_wall ~/.wallpapers/wallhaven-576124.png
-set $login_wall ~/.wallpapers/mercenary-kings-keyart.jpg
-set $lock_wall ~/.wallpapers/mercenary-kings-keyart.jpg
+  exec_always xrdb -merge ~/.Xresources
 
+  set $mod Mod4
+  set $term urxvt
+  set $shell /usr/bin/zsh
+  set $desktop_wall ~/.wallpapers/desktop.jpg
+  set $login_wall ~/.wallpapers/lockscreen.jpg
+  set $lock_wall ~/.wallpapers/lockscreen.jpg
 
 ##--Just i3-gaps related--##
 
@@ -19,7 +22,7 @@ for_window [class="(?i)gucharmap"] floating enable
 for_window [class="(?i)dde-file-manager"] floating enable
 for_window [class="(?i)gitk"] floating enable
 
-gaps inner 10
+gaps inner 8
 gaps outer 0
 smart_borders on
 new_window none
@@ -99,12 +102,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
 
 bindsym $mod+Shift+l exec --no-startup-id ~/.scripts/lock.sh
-bindsym $mod+Shift+p exec poweroff
+bindsym $mod+Escape exec poweroff
 
 ###---Execute external applications---###
 
-exec_always --no-startup-id xrdb ~/.Xresources
-
+exec_always --no-startup-id ~/.scripts/dunst.sh
 exec_always --no-startup-id ~/.scripts/compton.sh
 exec_always --no-startup-id ~/.scripts/mopidy.sh
 exec_always --no-startup-id ~/.scripts/polybar.sh
@@ -113,3 +115,9 @@ exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
 
 exec --no-startup-id betterlockscreen -u $lock_wall -w
 exec_always --no-startup-id feh --bg-fill $desktop_wall
+
+###---Assigns App to window---###
+assign [class="URxvt"] 1
+assign [class="(?i)firefox"] 2
+assign [class="(?i)atom"] 3
+assign [class="(?i)slack"] 4
