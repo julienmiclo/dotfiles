@@ -39,7 +39,7 @@ if ping -c 1 176.34.131.233 &> /dev/null; then
 
 	WEATHER_ICON="${icon}"
 
-	echo "%{T3}${WEATHER_ICON}%{T-} ${WEATHER_MAIN}, ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
+	echo "%{T3}${WEATHER_ICON}%{T-} ${WEATHER_MAIN} ${WEATHER_TEMP}${SYMBOL_CELSIUS}"
 else
 	echo "waiting..."
 fi
