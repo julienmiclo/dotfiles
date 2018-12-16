@@ -1,1 +1,0 @@
-alias update="pacman -Syu && yaourt -Syyua --noconfirm"
