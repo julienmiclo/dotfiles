@@ -1,3 +1,4 @@
+atom
 mariadb
 mariadb-clients
 nginx-mainline
@@ -7,5 +8,6 @@ perl
 php
 php-fpm
 phpmyadmin
+postman-bin
 ruby
 rubygems
