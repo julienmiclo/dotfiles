@@ -5,7 +5,7 @@ include-file = ~/.config/polybar/bars/top.conf
 #include-file = ~/.config/polybar/bars/bottom.conf
 
 include-file = ~/.config/polybar/modules/i3.conf
-include-file = ~/.config/polybar/modules/backlight.conf
+#include-file = ~/.config/polybar/modules/backlight.conf
 include-file = ~/.config/polybar/modules/battery.conf
 include-file = ~/.config/polybar/modules/date.conf
 #include-file = ~/.config/polybar/modules/powermenu.conf
