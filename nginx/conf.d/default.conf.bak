@@ -1,0 +1,17 @@
+server {
+	listen 80;
+	server_name localhost;
+	root /srv/www;
+	
+	index index.php index.html;
+	
+	autoindex on;
+
+	access_log /var/log/www/localhost/access.log;
+	error_log /var/log/www/localhost/error.log;
+
+	include /etc/nginx/base/errors.conf;
+	include /etc/nginx/base/fastcgi.conf;
+	
+	include /etc/nginx/base/ssl.conf;
+}
