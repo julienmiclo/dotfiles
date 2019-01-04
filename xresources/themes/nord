@@ -1,0 +1,46 @@
+! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+! title      Nord XResources                                    +
+! project    nord-xresources                                    +
+! version    0.1.0                                              +
+! repository https://github.com/arcticicestudio/col-xresources +
+! author     Arctic Ice Studio                                  +
+! email      development@arcticicestudio.com                    +
+! copyright  Copyright (C) 2016                                 +
+! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#define col0 #2E3440
+#define col1 #3B4252
+#define col2 #434C5E
+#define col3 #4C566A
+#define col4 #D8DEE9
+#define col5 #E5E9F0
+#define col6 #ECEFF4
+#define col7 #8FBCBB
+#define col8 #88C0D0
+#define col9 #81A1C1
+#define col10 #5E81AC
+#define col11 #BF616A
+#define col12 #D08770
+#define col13 #EBCB8B
+#define col14 #A3BE8C
+#define col15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
