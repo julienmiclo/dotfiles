@@ -8,9 +8,12 @@
   set $mod Mod4
   set $term urxvt
   set $shell /usr/bin/zsh
+  set $shutdown poweroff
+  set $reboot reboot
   set $desktop_wall ~/.wallpapers/desktop.jpg
   set $login_wall ~/.wallpapers/lockscreen.jpg
   set $lock_wall ~/.wallpapers/lockscreen.jpg
+
 
 ##--Just i3-gaps related--##
 
@@ -32,22 +35,17 @@ client.focused #fff #fff #fff #fff
 
 ##--Basic i3 bindings--##
 
-# use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
 bindsym $mod+Return exec --no-startup-id $term -e $shell
 
-# kill focused window
 bindsym $mod+q kill
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -60,7 +58,6 @@ bindsym $mod+f fullscreen toggle
 
 bindsym $mod+Shift+space floating toggle
 
-# switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -74,7 +71,6 @@ bindsym $mod+Tab workspace back_and_forth
 
 workspace_auto_back_and_forth yes
 
-# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -85,6 +81,11 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -92,17 +93,20 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 
 ###---Applications bindings---###
 
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec light -A 10 && exec dunstify "$(light -G)"
+bindsym XF86MonBrightnessDown exec light -U 10 && exec dunstify "$(light -G)"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run -display-run " "
+bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run
+#bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show -run 
 
 bindsym $mod+Shift+l exec --no-startup-id ~/.scripts/lock.sh
 bindsym $mod+Escape exec poweroff
+
+bindsym $mod+e exec $term -e ranger
 
 ###---Execute external applications---###
 
@@ -115,9 +119,3 @@ exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
 
 exec --no-startup-id betterlockscreen -u $lock_wall -w
 exec_always --no-startup-id feh --bg-fill $desktop_wall
-
-###---Assigns App to window---###
-assign [class="URxvt"] 1
-assign [class="(?i)firefox"] 2
-assign [class="(?i)atom"] 3
-assign [class="(?i)slack"] 4
