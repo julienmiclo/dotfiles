@@ -1,0 +1,13 @@
+! ------------------------------------------------------------------------------
+!                      ROFI Settings
+! ------------------------------------------------------------------------------
+
+rofi.theme: DarkBlue
+rofi.hide-scrollbar:      true
+rofi.column:             4
+rofi.location:           0
+rofi.lines:              1
+rofi.sidebar-mode:       true
+rofi.fullscreen:         false
+rofi.transparency:  	 real
+rofi.color-enabled: true
