@@ -1,4 +1,5 @@
 syntax on
+color dracula
 set autoindent
 set backspace=indent,eol,start
 set hidden
