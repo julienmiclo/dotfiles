@@ -3,3 +3,5 @@ vim/.vim/bundle/*
 wallpapers/.wallpapers/*
 !wallpapers/.wallpapers/.gitkeep
 modmap
+ssh/.ssh/known_hosts
+config/.config/mopidy/spotify.conf
