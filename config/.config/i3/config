@@ -30,8 +30,7 @@ gaps outer 0
 smart_borders on
 new_window none
 
-client.focused #fff #fff #fff #fff
-
+client.focused #ff79c6 #ff79c6 #ff79c6 #ff79c6
 
 ##--Basic i3 bindings--##
 
@@ -107,6 +106,7 @@ bindsym $mod+Shift+l exec --no-startup-id ~/.scripts/lock.sh
 bindsym $mod+Escape exec poweroff
 
 bindsym $mod+e exec $term -e ranger
+bindsym Print exec --no-startup-id ~/.scripts/screenshot.sh
 
 ###---Execute external applications---###
 
@@ -115,7 +115,7 @@ exec_always --no-startup-id ~/.scripts/compton.sh
 exec_always --no-startup-id ~/.scripts/mopidy.sh
 exec_always --no-startup-id ~/.scripts/polybar.sh
 
-exec xautolock -detecsleep -time 5 -locker -notify 30 -notifier
+exec xautolock -time 3 -locker ~/.scripts/lock.sh -detectsleep
 
 exec --no-startup-id betterlockscreen -u $lock_wall -w
 exec_always --no-startup-id feh --bg-fill $desktop_wall
