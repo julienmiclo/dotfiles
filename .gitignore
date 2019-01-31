@@ -5,3 +5,4 @@ wallpapers/.wallpapers/*
 modmap
 ssh/.ssh/known_hosts
 config/.config/mopidy/spotify.conf
+config/.config/gtk-3.0
