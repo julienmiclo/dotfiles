@@ -16,25 +16,22 @@ URxvt.modifier: mod1
 URxvt*loginShell: true
 URxvt.borderless: true
 URxvt*dynamicColors: on
-URxvt.geometry: 90x20
 URxvt.internalBorder: 3
 URxvt.lineSpace: 1
 URxvt.loginShell: true
-URxvt.saveLines: 0
+URxvt.saveLines: 2042
 URxvt*termName: xterm-256color
-URxvt.transparent: false
+#URxvt.transparent: false
 URxvt.visualBell: false
 URxvt.iso14755:             false
 URxvt.iso14755_52:          false
-URxvt.perl-ext:
-URxvt.perl-ext-common:
-URxvt.font: xft:SourceCodePro:size=12,xft:PowerlineSymbols:size=12
+URxvt.font: xft:SourceCodePro:size=12
 URxvt*boldFont: xft:SourceCodePro:bold:size=12
 URxvt.allow_bold:           true
 URxvt*boldMode:             true
 URxvt*letterSpace:          1
 URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            true
+URxvt.scrollBar:            false
 URxvt.cursorBlink:          true
 URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         false
@@ -42,7 +39,8 @@ URxvt.pointerBlank:         false
 
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
-*.background: #282A36
+#*.background: #282A36
+*.background: #191919
 *.cursorColor: #D8DEE9
 
 *.color0:     #000000
