@@ -11,4 +11,4 @@ alias reboot="sudo systemctl reboot"
 
 alias wifi="sudo wifi-menu"
 
-alias clear-cache="trizen -Sc"
+alias clear-cache="trizen -Sc --noconfirm"
