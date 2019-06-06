@@ -1,6 +1,7 @@
 zstyle ':prezto:*:*' color 'yes'
 
 zstyle ':prezto:load' pmodule \
+	'contrib-prompt' \
 	'environment' \
 	'command-not-found' \
 	'terminal' \
@@ -14,6 +15,9 @@ zstyle ':prezto:load' pmodule \
 	'docker' \
 	'pacman' \
 	'tmux' \
+	'rails' \
+	'ruby' \
+	'screen' \
 	'completion' \
 	'syntax-highlighting' \
 	'history-substring-search' \
