@@ -12,3 +12,6 @@ alias reboot="sudo systemctl reboot"
 alias wifi="sudo wifi-menu"
 
 alias clear-cache="trizen -Sc --noconfirm"
+
+alias ssh="TERM=xterm-256color ssh"
+alias homeserver="ssh root@82.226.104.119"
