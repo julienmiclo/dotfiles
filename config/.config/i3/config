@@ -6,7 +6,8 @@
   exec_always xrdb -merge ~/.Xresources
 
   set $mod Mod4
-  set $term urxvt
+  set $term st
+  set $term_opt 
   set $shell /usr/bin/zsh
   set $shutdown poweroff
   set $reboot reboot
@@ -36,7 +37,7 @@ client.focused #ff79c6 #ff79c6 #ff79c6 #ff79c6
 
 floating_modifier $mod
 
-bindsym $mod+Return exec --no-startup-id $term -e $shell
+bindsym $mod+Return exec --no-startup-id $term $term_opt $shell
 
 bindsym $mod+q kill
 
@@ -115,7 +116,7 @@ exec_always --no-startup-id ~/.scripts/compton.sh
 exec_always --no-startup-id ~/.scripts/mopidy.sh
 exec_always --no-startup-id ~/.scripts/polybar.sh
 
-exec xautolock -time 3 -locker ~/.scripts/lock.sh -detectsleep
+exec xautolock -detectsleep -time 30 -locker ~/.scripts/lock.sh
 
 exec --no-startup-id betterlockscreen -u $lock_wall -w
 exec_always --no-startup-id feh --bg-fill $desktop_wall
