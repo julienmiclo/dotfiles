@@ -21,12 +21,12 @@ URxvt.lineSpace: 1
 URxvt.loginShell: true
 URxvt.saveLines: 2042
 URxvt*termName: xterm-256color
-#URxvt.transparent: false
+!URxvt.transparent: false
 URxvt.visualBell: false
 URxvt.iso14755:             false
 URxvt.iso14755_52:          false
-URxvt.font: xft:SourceCodePro:size=12
-URxvt*boldFont: xft:SourceCodePro:bold:size=12
+URxvt*font: xft:Source Code Pro for Powerline:regular:size=12
+URxvt*boldFont: xft:Source Code Pro for Powerline:bold:size=12
 URxvt.allow_bold:           true
 URxvt*boldMode:             true
 URxvt*letterSpace:          1
@@ -37,9 +37,19 @@ URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         false
 
 
+!-------------------------------------------------------------------------------
+! st settings
+!-------------------------------------------------------------------------------
+st.termname: xterm-256color
+st.font: Source Code Pro for Powerline:size=12
+st.alpha: 0.98
+st.borderpx: 12
+st.blinktimeout: 800
+
+
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
-#*.background: #282A36
+!*.background: #282A36
 *.background: #191919
 *.cursorColor: #D8DEE9
 
