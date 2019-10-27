@@ -1,2 +1,6 @@
 [Added Associations]
 text/plain=atom.desktop;vim.desktop;
+video/x-matroska=vlc.desktop;
+
+[Default Applications]
+x-scheme-handler/postman=Postman.desktop
