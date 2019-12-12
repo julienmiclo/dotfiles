@@ -1,3 +1,2 @@
-export ANDROID_SDK_ROOT=/etc/android/sdk
-export ANDROID_HOME=/opt/android-studio-canary
-export PATH=$PATH:$ANDROID_HOME:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
+export ANDROID_SDK_ROOT=/home/julien/android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools:$ANDROID_SDK_ROOT/platforms
