@@ -96,8 +96,8 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 bindsym XF86MonBrightnessUp exec xbacklight -set 60 && exec dunstify "Bright : 60%"
 bindsym XF86MonBrightnessDown exec xbacklight -set 30 && exec dunstify "Bright : 30%"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && exec dunstify "Volume : $()"
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && exec dunstify "Volume : $()"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && exec dunstify "Volume : $(pulsemixer --id source-1 --get-volume | cut -c1-3)"
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && exec dunstify "Volume : $(pulsemixer --id source-1 --get-volume | cut -c1-3)"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && exec dunstify "Mute"
 
 bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show run
