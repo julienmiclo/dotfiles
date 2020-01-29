@@ -7,5 +7,4 @@ ssh/.ssh/*
 !ssh/.ssh/config
 config/.config/mopidy/spotify.conf
 config/.config/insight-nodejs
-
-
+config/.config/Slack
