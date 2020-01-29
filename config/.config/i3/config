@@ -93,7 +93,7 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 
 ###---Applications bindings---###
 
-bindsym XF86MonBrightnessUp exec xbacklight -set 60 && exec dunstify "Bright : 60%"
+bindsym XF86MonBrightnessUp exec xbacklight -set 80 && exec dunstify "Bright : 80%"
 bindsym XF86MonBrightnessDown exec xbacklight -set 30 && exec dunstify "Bright : 30%"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && exec dunstify "Volume : $(pulsemixer --id source-1 --get-volume | cut -c1-3)"
