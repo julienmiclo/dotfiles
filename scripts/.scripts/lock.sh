@@ -5,8 +5,8 @@ insidecolor=00000000
 linecolor=00000000
 separatorcolor=00000000
 
-ringvercolor=00000000
-insidevercolor=00000000
+ringvercolor=FFFFFFFF
+insidevercolor=FFFFFF33
 
 ringwrongcolor=00000000
 insidewrongcolor=00000000
