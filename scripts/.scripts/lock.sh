@@ -21,3 +21,7 @@ i3lock -t -i ~/.wallpapers/lockscreen.jpg \
 	--insidevercolor=$insidevercolor --veriftext='' --ringwrongcolor=$ringwrongcolor \
 	--insidewrongcolor=$insidewrongcolor --wrongtext='' --keyhlcolor=$keyhlcolor \
 	--bshlcolor=$bshlcolor --noinputtext=''
+
+
+
+# convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) source-image.jpg lockscreen.png
