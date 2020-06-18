@@ -8,3 +8,5 @@ ssh/.ssh/*
 config/.config/mopidy/spotify.conf
 config/.config/insight-nodejs
 config/.config/Slack
+config/.config/JetBrains
+!config/.config/JetBrains/PhpStorm*/options
