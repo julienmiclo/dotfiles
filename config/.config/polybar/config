@@ -18,7 +18,9 @@ include-file = ~/.config/polybar/modules/volume.conf
 include-file = ~/.config/polybar/modules/weather.conf
 #include-file = ~/.config/polybar/modules/wlan.conf
 #include-file = ~/.config/polybar/modules/xwindow.conf
-include-file = ~/.config/polybar/modules/dropbox.conf
+#include-file = ~/.config/polybar/modules/dropbox.conf
 include-file = ~/.config/polybar/modules/update.conf
+include-file = ~/.config/polybar/modules/keyboard.conf
+
 
 ; vim:ft=dosini

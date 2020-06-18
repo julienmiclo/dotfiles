@@ -1,0 +1,12 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="PropertiesComponent">
+        <property name="settings.editor.selected.configurable" value="terminal" />
+      </component>
+      <component name="TerminalProjectOptionsProvider">
+        <option name="myStartingDirectory" value="$USER_HOME$/www" />
+      </component>
+    </defaultProject>
+  </component>
+</application>

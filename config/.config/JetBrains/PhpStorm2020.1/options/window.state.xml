@@ -1,0 +1,32 @@
+<application>
+  <component name="WindowManager">
+    <frame x="966" y="30" width="944" height="1040" />
+    <layout>
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+    </layout>
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="555" y="-19" width="800" height="700" key="#Plugins" timestamp="1592307970655">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="-19" width="800" height="700" key="#Plugins/0.0.1920.1080" timestamp="1592307970655" />
+    <state x="743" y="100" width="424" height="498" key="FileChooserDialogImpl" timestamp="1592237360779">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="100" width="424" height="498" key="FileChooserDialogImpl/0.0.1920.1080" timestamp="1592237360779" />
+    <state x="464" y="26" key="SettingsEditor" timestamp="1592237176018">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="464" y="26" key="SettingsEditor/0.0.1920.1080" timestamp="1592237176018" />
+    <state x="959" y="427" key="WELCOME_SCREEN" timestamp="1592303429557">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="959" y="427" key="WELCOME_SCREEN/0.0.1920.1080" timestamp="1592303429557" />
+  </component>
+</application>
