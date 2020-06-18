@@ -10,6 +10,8 @@ alias poweroff="sudo systemctl poweroff"
 alias reboot="sudo systemctl reboot"
 
 alias wifi="sudo wifi-menu"
+alias load-keyboard="~/.dotfiles/scripts/.scripts/keyboard/load_apple_keyboard.sh"
+alias unload-keyboard="~/.dotfiles/scripts/.scripts/keyboard/unload_apple_keyboard.sh"
 
 alias clear-cache="trizen -Sc --noconfirm"
 
