@@ -1,9 +1,0 @@
-com.intellij.ideolog
-de.cmm.side_nodes
-com.dmarcotte.handlebars
-ru.adelf.idea.dotenv
-de.espend.idea.laravel
-de.espend.idea.php.annotation
-fr.adrienbrault.idea.symfony2plugin
-com.vermouthx.idea
-com.markskelton.one-dark-theme
