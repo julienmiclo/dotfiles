@@ -9,4 +9,5 @@ config/.config/mopidy/spotify.conf
 config/.config/insight-nodejs
 config/.config/Slack
 config/.config/JetBrains
+config/.config/yarn/global/node_modules
 !config/.config/JetBrains/PhpStorm*/options
